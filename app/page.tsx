@@ -1,4 +1,28 @@
-import Image from "next/image";
+'use client'
+
+import Navbar from '@/app/components/Navbar'
+import Hero from '@/app/components/Hero'
+import Projects from '@/app/components/Projects'
+import Experience from '@/app/components/Experience'
+import Skills from '@/app/components/Skills'
+import Contact from '@/app/components/Contact'
+
+export default function Home() {
+  return (
+    <main>
+      <Navbar />
+      <Hero />
+      <Projects />
+      <Experience />
+      <Skills />
+      <Contact />
+    </main>
+  )
+}
+
+
+
+/* import Image from "next/image";
 
 export default function Home() {
   return (
@@ -62,4 +86,4 @@ export default function Home() {
       </main>
     </div>
   );
-}
+} */
