@@ -1,3 +1,4 @@
+import SectionLabel from './SectionLabel'
 type ContactLink = {
      label: string
      href: string
@@ -12,60 +13,30 @@ const links: ContactLink[] = [
 
 export default function Contact() {
      return (
-          <section id="contact" style={{ padding: '64px 48px' }}>
-               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                    <div style={{ width: '24px', height: '1px', background: '#e8b84b' }} />
-                    <span style={{
-                         fontFamily: 'var(--font-mono)',
-                         fontSize: '11px',
-                         color: '#e8b84b',
-                         letterSpacing: '0.12em',
-                         textTransform: 'uppercase',
-                    }}>
-                         Contact
-                    </span>
-               </div>
+          <section id="contact" className="px-12 py-16 border-b border-border">
+               <SectionLabel text="Contact" />
 
-               <h2 style={{
-                    fontFamily: 'var(--font-serif)',
-                    fontSize: '32px',
-                    color: '#e8e4d9',
-                    marginBottom: '16px',
-               }}>
+
+               <h2 className="font-serif text-[32px] text-foreground mb-4">
+
                     Let&apos;s Connect
                </h2>
 
-               <p style={{
-                    fontFamily: 'var(--font-sans)',
-                    fontSize: '14px',
-                    color: '#8a94a8',
-                    maxWidth: '480px',
-                    lineHeight: 1.7,
-                    fontWeight: 300,
-                    marginBottom: '36px',
-               }}>
+               <p className="font-sans text-[14px] text-muted max-w-[480px] leading-[1.7] font-light mb-9">
                     Open to remote positions, AI/ML research roles, and Master&apos;s
                     programme opportunities. Based in Kayseri — available to relocate.
                     Always happy to talk engineering, cloud, or AI.
                </p>
 
-               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+               <div className="flex gap-3 flex-wrap">
                     {links.map((link) => (
                          <a
                               key={link.label}
                               href={link.href}
                               target={link.href.startsWith('mailto') ? '_self' : '_blank'}
                               rel="noreferrer"
-                              style={{
-                                   fontFamily: 'var(--font-mono)',
-                                   fontSize: '11px',
-                                   color: '#e8b84b',
-                                   border: '1px solid #a07e2a',
-                                   padding: '10px 20px',
-                                   borderRadius: '4px',
-                                   textDecoration: 'none',
-                                   letterSpacing: '0.05em',
-                              }}
+                              className="font-mono text-[11px] text-accent border border-accent-dim px-5 py-2.5 rounded tracking-[0.05em] no-underline hover:bg-accent hover:text-background transition-colors duration-200"
+
                          >
                               {link.label}
                          </a>
@@ -73,28 +44,14 @@ export default function Contact() {
                </div>
 
 
-               <div style={{
-                    marginTop: '80px',
-                    paddingTop: '24px',
-                    borderTop: '1px solid #2a3245',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
-                    gap: '8px',
-               }}>
-                    <span style={{
-                         fontFamily: 'var(--font-mono)',
-                         fontSize: '10px',
-                         color: '#8a94a8',
-                    }}>
+               <div className="mt-20 pt-6 border-t border-border flex justify-between items-center flex-wrap gap-2">
+
+                    <span className="font-mono text-[10px] text-muted">
+
                          Sara Abouroumia © 2026
                     </span>
-                    <span style={{
-                         fontFamily: 'var(--font-mono)',
-                         fontSize: '10px',
-                         color: '#8a94a8',
-                    }}>
+                    <span className="font-mono text-[10px] text-muted">
+
                          Kayseri, Turkey · Open to Remote
                     </span>
                </div>
