@@ -56,6 +56,7 @@ export default function RootLayout({
       lang="en"
     >
       <body className={`${dmSerif.variable} ${spaceMono.variable} ${dmSans.variable}`}
+        suppressHydrationWarning
       >{children}</body>
     </html>
   );
