@@ -1,3 +1,5 @@
+'use client'
+
 type Project = {
      num: string
      title: string
@@ -34,7 +36,8 @@ type Project = {
      },
    ]
    
-   export default function Projects() {
+   export default function 
+   Projects() {
      return (
        <section id="projects" style={{
          padding: '64px 48px',

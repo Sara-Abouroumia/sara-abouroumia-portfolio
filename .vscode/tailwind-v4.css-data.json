@@ -1,0 +1,15 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@theme",
+      "description": "Tailwind CSS v4: declares theme variables (colors, fonts, breakpoints, etc.) for utility generation.",
+      "references": [
+        {
+          "name": "Tailwind CSS: Theme variables",
+          "url": "https://tailwindcss.com/docs/theme"
+        }
+      ]
+    }
+  ]
+}
