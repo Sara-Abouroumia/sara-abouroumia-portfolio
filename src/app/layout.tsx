@@ -1,6 +1,6 @@
 import { DM_Serif_Display, Space_Mono, DM_Sans } from 'next/font/google'
 import "./globals.css";
-
+import type { Metadata } from 'next'
 
 const dmSerif = DM_Serif_Display({
   subsets: ['latin'],
@@ -21,11 +21,10 @@ const dmSans = DM_Sans({
   variable: '--font-sans',
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Sara Abouroumia — Full Stack Engineer',
   description: 'Full stack software engineer specialising in cloud, deployment, and production systems.',
 }
-
 
 export default function RootLayout({
   children,
