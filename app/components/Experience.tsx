@@ -1,3 +1,5 @@
+import SectionLabel from './SectionLabel'
+
 type Role = {
      company: string
      role: string
@@ -44,118 +46,49 @@ type Role = {
    
    export default function Experience() {
      return (
-       <section id="experience" style={{
-         padding: '64px 48px',
-         borderBottom: '1px solid #2a3245',
-       }}>
+       <section id="experience" className="px-12 py-16 border-b border-border">
+         <SectionLabel text="Experience" />
+         
    
-         <div style={{
-           display: 'flex',
-           alignItems: 'center',
-           gap: '8px',
-           marginBottom: '8px',
-         }}>
-           <div style={{ width: '24px', height: '1px', background: '#e8b84b' }} />
-           <span style={{
-             fontFamily: 'var(--font-mono)',
-             fontSize: '11px',
-             color: '#e8b84b',
-             letterSpacing: '0.12em',
-             textTransform: 'uppercase',
-           }}>
-             Experience
-           </span>
-         </div>
-   
-         <h2 style={{
-           fontFamily: 'var(--font-serif)',
-           fontSize: '32px',
-           color: '#e8e4d9',
-           marginBottom: '40px',
-         }}>
+         <h2 className="font-serif text-[32px] text-foreground mb-10">
            Where I&apos;ve Worked
          </h2>
    
-         <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
+         <div className="flex flex-col">
            {roles.map((role, index) => (
              <div
                key={index}
-               style={{
-                 display: 'grid',
-                 gridTemplateColumns: '1px 1fr',
-                 gap: '0 28px',
-               }}
+               className="grid [grid-template-columns:1px_1fr] gap-x-7"
              >
-               {/* Timeline line + dot */}
-               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                 <div style={{
-                   width: '7px',
-                   height: '7px',
-                   borderRadius: '50%',
-                   background: '#e8b84b',
-                   marginLeft: '-3px',
-                   marginTop: '4px',
-                   flexShrink: 0,
-                 }} />
+               {/* Timeline line + dot ?  + connecting line  */}
+               <div className="flex flex-col items-center">
+                 <div className="w-[7px] h-[7px] rounded-full bg-accent -ml-[3px] mt-1 shrink-0" />
                  {index < roles.length - 1 && (
-                   <div style={{
-                     width: '1px',
-                     flex: 1,
-                     background: '#2a3245',
-                     marginTop: '6px',
-                     marginBottom: '0',
-                   }} />
+                   <div className="w-px flex-1 bg-border mt-1.5"/>
                  )}
                </div>
    
                {/* Content */}
-               <div style={{ paddingBottom: index < roles.length - 1 ? '36px' : '0' }}>
-                 <div style={{
-                   fontFamily: 'var(--font-sans)',
-                   fontSize: '15px',
-                   fontWeight: 500,
-                   color: '#e8e4d9',
-                 }}>
+               <div className={index < roles.length - 1 ? 'pb-9' : ''}>
+                 <div className="font-sans text-[15px] font-medium text-foreground">
                    {role.company}
                  </div>
    
-                 <div style={{
-                   fontFamily: 'var(--font-mono)',
-                   fontSize: '11px',
-                   color: '#e8b84b',
-                   margin: '3px 0',
-                 }}>
+                 <div className="font-mono text-[11px] text-accent my-[3px]">
                    {role.role}
                  </div>
    
-                 <div style={{
-                   fontFamily: 'var(--font-mono)',
-                   fontSize: '10px',
-                   color: '#8a94a8',
-                   marginBottom: '12px',
-                 }}>
+                 <div className="font-mono text-[10px] text-muted mb-3">
                    {role.date} · {role.location}
                  </div>
    
-                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                 <ul className="list-none p-0 m-0">
                    {role.bullets.map((bullet, i) => (
                      <li
                        key={i}
-                       style={{
-                         fontFamily: 'var(--font-sans)',
-                         fontSize: '13px',
-                         color: '#8a94a8',
-                         lineHeight: 1.7,
-                         paddingLeft: '14px',
-                         position: 'relative',
-                         marginBottom: '2px',
-                       }}
+                       className="font-sans text-[13px] text-muted leading-[1.7] pl-3.5 relative mb-0.5"
                      >
-                       <span style={{
-                         position: 'absolute',
-                         left: 0,
-                         color: '#a07e2a',
-                       }}>—</span>
+                       <span className="absolute left-0 text-accent-dim">—</span>
                        {bullet}
                      </li>
                    ))}
