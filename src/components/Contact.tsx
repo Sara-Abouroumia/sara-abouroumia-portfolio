@@ -1,15 +1,7 @@
 import SectionLabel from './SectionLabel'
-type ContactLink = {
-     label: string
-     href: string
-}
+import { links } from '@/data/contact'
 
-const links: ContactLink[] = [
-     { label: 'Email', href: 'mailto:saraabouroumia@gmail.com' },
-     { label: 'LinkedIn', href: 'https://linkedin.com/in/sara-abouroumia-7b5665210' },
-     { label: 'GitHub', href: 'https://github.com/Sara-Abouroumia' },
-     { label: 'Resume', href: '/sara_abouroumia_resume_24032026.pdf' },
-]
+
 
 export default function Contact() {
      return (

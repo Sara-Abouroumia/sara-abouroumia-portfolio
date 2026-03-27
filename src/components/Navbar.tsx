@@ -1,9 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-
-const links = ['home', 'projects', 'experience', 'skills', 'contact'] as const
-type NavLink = typeof links[number]
+import { NavLink, navLinks as links } from '@/data/navigation'
 
 export default function Navbar() {
   const [active, setActive] = useState<NavLink>('home')
