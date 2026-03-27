@@ -14,9 +14,7 @@ export default function Navbar() {
 
   return (
     <nav className="flex items-center justify-between px-12 py-4 border-b border-border bg-background sticky top-0 z-[100]">
-      <span className="font-mono text-[13px] text-accent tracking-[0.05em]">
-        SA_
-      </span>
+      <span className="font-mono text-[13px] text-accent tracking-[0.05em]">SA_</span>
 
       <div className="flex gap-7">
         {links.map((link) => (

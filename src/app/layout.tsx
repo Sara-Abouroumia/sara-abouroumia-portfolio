@@ -1,5 +1,5 @@
 import { DM_Serif_Display, Space_Mono, DM_Sans } from 'next/font/google'
-import "./globals.css";
+import './globals.css'
 import type { Metadata } from 'next'
 
 const dmSerif = DM_Serif_Display({
@@ -23,21 +23,23 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: 'Sara Abouroumia — Full Stack Engineer',
-  description: 'Full stack software engineer specialising in cloud, deployment, and production systems.',
+  description:
+    'Full stack software engineer specialising in cloud, deployment, and production systems.',
 }
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-    >
-      <body className={`${dmSerif.variable} ${spaceMono.variable} ${dmSans.variable}`}
+    <html lang="en">
+      <body
+        className={`${dmSerif.variable} ${spaceMono.variable} ${dmSans.variable}`}
         suppressHydrationWarning
-      >{children}</body>
+      >
+        {children}
+      </body>
     </html>
-  );
+  )
 }
