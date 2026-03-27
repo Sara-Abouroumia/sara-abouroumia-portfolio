@@ -25,6 +25,25 @@ export const metadata: Metadata = {
   title: 'Sara Abouroumia — Full Stack Engineer',
   description:
     'Full stack software engineer specialising in cloud, deployment, and production systems.',
+  metadataBase: new URL('https://sara-abouroumia-portfolio.vercel.app'),
+  openGraph: {
+    title: 'Sara Abouroumia — Full Stack Engineer',
+    description:
+      'Full stack software engineer specialising in cloud, deployment, and production systems.',
+    url: 'https://sara-abouroumia-portfolio.vercel.app',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Sara Abouroumia — Full Stack Engineer',
+    description:
+      'Full stack software engineer specialising in cloud, deployment, and production systems.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({

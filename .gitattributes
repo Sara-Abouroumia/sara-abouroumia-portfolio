@@ -1,0 +1,2 @@
+# Husky hooks must be UTF-8 with LF so sh can run them (avoid UTF-16 / CRLF from editors).
+.husky/** text eol=lf
