@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+@theme {
+  /* Colors */
+  --color-background: #0c0f14;
+  --color-foreground: #e8e4d9;
+  --color-muted:      #8a94a8;
+  --color-accent:     #e8b84b;
+  --color-accent-dim: #a07e2a;
+  --color-border:     #2a3245;
+  --color-card:       #141820;
+  --color-tag:        #1f2a3a;
+
+  /* Fonts — Tailwind generates font-serif, font-mono, font-sans utilities.
+     Next.js overrides these variables at runtime via the html className,
+     so the optimised font stacks win in the browser. */
+  --font-serif: 'DM Serif Display', serif;
+  --font-mono:  'Space Mono', monospace;
+  --font-sans:  'DM Sans', sans-serif;
+}
+
 :root {
   --background: #0c0f14;
   --text-primary: #e8e4d9;
@@ -20,20 +39,19 @@
   }
 } */
 
-
-* {
+/* Tailwind's preflight handles this  */
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
-}
+} */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--text-primary);
+  background: var(--color-background);
+  color: var(--color-foreground);
   min-height: 100vh;
 }
