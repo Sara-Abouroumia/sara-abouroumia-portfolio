@@ -15,7 +15,7 @@ import { roles } from '@/data/experience'
          <div className="flex flex-col">
            {roles.map((role, index) => (
              <div
-               key={index}
+             key={`${role.company}-${role.role}-${role.date}`}
                className="grid [grid-template-columns:1px_1fr] gap-x-7"
              >
                {/* Timeline line + dot ?  + connecting line  */}
@@ -41,9 +41,9 @@ import { roles } from '@/data/experience'
                  </div>
    
                  <ul className="list-none p-0 m-0">
-                   {role.bullets.map((bullet, i) => (
+                   {role.bullets.map((bullet) => (
                      <li
-                       key={i}
+                       key={bullet}
                        className="font-sans text-[13px] text-muted leading-[1.7] pl-3.5 relative mb-0.5"
                      >
                        <span className="absolute left-0 text-accent-dim">—</span>
